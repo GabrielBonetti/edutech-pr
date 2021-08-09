@@ -1,0 +1,72 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+
+function desenhaRetangulo(x,y,largura,altura,cor) {
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+      pincel.fillStyle=cor;
+        pincel.fillRect(x,y, largura, altura);
+      pincel.strokeStyle='black';
+        pincel.strokeRect(x,y, largura, altura);
+  }
+
+
+
+
+
+function desenhaTexto(x, y, texto) {
+        var tela = document.querySelector('canvas');
+      var pincel = tela.getContext('2d');
+
+       pincel.font='15px Georgia';
+        pincel.fillStyle='black';
+        pincel.fillText(texto, x, y);    
+    }
+
+
+//Gafico
+
+desenhaRetangulo(100,50,100,100,"blue");
+
+desenhaRetangulo(100,150,100,50,"green");
+
+desenhaRetangulo(100,200,100,40,"yellow");
+
+desenhaRetangulo(100,240,100,10,"red");
+
+//texto
+
+desenhaTexto(0,20,"   Navegadores usados pelos alunos do Alura em 2015:");
+
+
+//legenda
+
+desenhaRetangulo(50,260,20,20,"blue");
+
+desenhaRetangulo(50,300,20,20,"green");
+
+desenhaRetangulo(50,340,20,20,"yellow");
+
+desenhaRetangulo(50,380,20,20,"red");
+
+
+
+//texto da legenda
+
+desenhaTexto(80,275,"Chrome  50%");
+
+desenhaTexto(80,315,"Firefox   25%");
+
+desenhaTexto(80,355,"Safari  20%");
+
+desenhaTexto(80,395,"Outros(Opera,IE,etc)  5%");
+
+
+
+
+
+x,y,texto
+</script>
